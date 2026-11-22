@@ -1,0 +1,337 @@
+/* ============================================================
+   MOONHOWL SHADOW — THEME 2: MOONLIT BLUE
+   Alternative to moonhowl-shadow.css (Theme 1)
+   Keep only ONE theme URL active in Wolvden CSS Files.
+   Your existing Den HTML and wolf banner remain unchanged.
+   ============================================================ */
+:root {
+  --moon-deep: #061424;
+  --moon-panel: rgba(9, 27, 45, .93);
+  --moon-gold: #81b9c8;
+  --moon-lightgold: #d2f4ee;
+  --moon-ivory: #e5f3f6;
+  --moon-teal: #96e7e7;
+}
+
+/* Use the ORIGINAL moonlit forest image supplied for Theme 2. */
+body {
+  background: #071b33 url("https://88mimicri88.github.io/moonhowl-shadow/moonhowl-moonlit-bg.jpg") center center / cover fixed no-repeat !important;
+  color: var(--moon-ivory);
+}
+
+/* Content shell — cool midnight-blue glass panels. */
+#main, main, .container.main, .container-fluid.main, #sidebar {
+  background-color: rgba(5, 16, 31, .88) !important;
+}
+.card, .card-body, .card-header, .panel, .panel-body,
+.panel-heading, .table, .table-responsive, .alert, .well, .boxcontainer {
+  background-color: var(--moon-panel) !important;
+  color: var(--moon-ivory) !important;
+  border-color: rgba(111, 187, 206, .53) !important;
+}
+.card, .panel, .alert, .well {
+  border: 1px solid rgba(111, 187, 206, .53) !important;
+  box-shadow: 0 3px 15px rgba(0, 6, 19, .48);
+}
+.card-header, .panel-heading, thead th, .table thead th {
+  color: #c9eff1 !important;
+  background: rgba(5, 19, 35, .97) !important;
+  border-bottom: 1px solid rgba(112, 185, 206, .55) !important;
+}
+.table td, .table th,
+.table-striped tbody tr:nth-of-type(odd),
+.table-striped tbody tr:nth-of-type(even) {
+  color: var(--moon-ivory) !important;
+  background-color: rgba(12, 34, 55, .87) !important;
+  border-color: rgba(135, 201, 219, .28) !important;
+}
+h1, h2, h3, h4, h5, h6 { color: #d4f9f4 !important; }
+a { color: #96e7e7; }
+a:hover, a:focus { color: #ffffff; }
+
+/* Navigation and tabs. */
+.navbar, .navbar-main, .navbar-status, .nav-tabs {
+  background-color: rgba(5, 18, 34, .97) !important;
+  border-color: rgba(125, 194, 210, .52) !important;
+}
+.navbar a, .navbar .nav-link, .nav-tabs .nav-link { color: #e0f5f6 !important; }
+.nav-tabs .nav-link.active {
+  background: #133a52 !important;
+  border-color: #89d9df !important;
+  color: #e5ffff !important;
+}
+
+/* Inputs and select menus. */
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+  color: var(--moon-ivory) !important;
+  background-color: #10283e !important;
+  border-color: #6aa9bc !important;
+}
+input:focus, select:focus, textarea:focus {
+  outline-color: #9cebf0;
+  border-color: #9cebf0 !important;
+}
+
+/* Existing wolf banner: same image, new moonlight-themed surround. */
+.moonhowl-hero {
+  max-width: 100%;
+  margin: 10px auto 24px;
+  padding: 12px;
+  border: 2px solid #7bc1ce;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(5, 22, 41, .97), rgba(15, 48, 67, .94));
+  box-shadow: 0 7px 24px rgba(0, 5, 18, .65), inset 0 0 0 1px rgba(194, 249, 246, .30);
+  text-align: center;
+}
+.moonhowl-hero img {
+  width: 100%; max-width: 100%; height: auto;
+  display: block; border-radius: 5px;
+}
+.moonhowl-welcome {
+  padding: 16px 12px 6px;
+  color: var(--moon-ivory);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.moonhowl-welcome h2 {
+  margin: 0 0 6px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-variant: small-caps;
+  letter-spacing: .08em;
+  color: #d4f9f4 !important;
+  font-size: clamp(23px, 3vw, 34px);
+  border: 0 !important;
+}
+.moonhowl-welcome p { margin: 8px auto; max-width: 680px; }
+.moonhowl-flourish { color: #89dae0; letter-spacing: .4em; }
+@media (max-width: 768px) {
+  body { background-attachment: scroll !important; }
+  .moonhowl-hero { padding: 6px; }
+  .moonhowl-welcome { font-size: 14px; }
+}
+
+
+/* ============================================================
+   MOONLIT BLUE — DELUXE DECORATIVE DETAILS (v2)
+   Original background, banner and base layout above are unchanged.
+   New features: jewel buttons, filigree-inspired tabs, wolf cards.
+   ============================================================ */
+
+/* Buttons: style actions, but preserve danger / warning semantics. */
+.btn:not(.btn-link),
+a.btn:not(.btn-link),
+button.btn:not(.btn-link),
+input.btn[type="submit"] {
+  color: #e5f9ff !important;
+  background: linear-gradient(145deg, #194665 0%, #071a32 100%) !important;
+  border: 1px solid #79c7e7 !important;
+  border-radius: 7px !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 2px 6px rgba(0,0,0,.32) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.75);
+  transition: background .18s ease, box-shadow .18s ease, border-color .18s ease !important;
+}
+.btn:not(.btn-link):not(:disabled):not(.disabled):hover,
+a.btn:not(.btn-link):hover {
+  background: linear-gradient(145deg, #28658b, #0d2d4b) !important;
+  border-color: #daf7ff !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.20), 0 0 13px rgba(93,195,255,.48) !important;
+}
+/* Important buttons remain visibly different from ordinary actions. */
+.btn-danger:not(.btn-link) {
+  background: linear-gradient(145deg, #ac5369, #542538) !important;
+  border-color: #d98a90 !important;
+}
+.btn-warning:not(.btn-link) {
+  background: linear-gradient(145deg, #927b4b, #44331c) !important;
+  border-color: #dcb46d !important;
+}
+.btn-success:not(.btn-link) {
+  background: linear-gradient(145deg, #3b7e79, #12413d) !important;
+  border-color: #91c6a3 !important;
+}
+.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+  opacity: .53 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+.btn:focus-visible, .nav-tabs .nav-link:focus-visible {
+  outline: 2px solid #a9efff !important;
+  outline-offset: 2px !important;
+}
+
+/* Decorative profile / den tabs. No layout shifts. */
+#main .nav-tabs {
+  border-bottom: 1px solid #79c7e7 !important;
+  background: rgba(3,13,18,.32) !important;
+}
+#main .nav-tabs .nav-link {
+  border: 1px solid transparent !important;
+  border-bottom: 0 !important;
+  border-radius: 8px 8px 0 0 !important;
+  padding: .55rem .85rem !important;
+  color: #9aebfb !important;
+  transition: box-shadow .18s ease, background .18s ease !important;
+}
+#main .nav-tabs .nav-link:hover:not(.active) {
+  background: rgba(95,158,166,.15) !important;
+  border-color: #79c7e7 !important;
+  box-shadow: 0 -2px 9px rgba(93,195,255,.48) !important;
+}
+#main .nav-tabs .nav-link.active,
+#main .nav-tabs .nav-item.show .nav-link {
+  color: #daf7ff !important;
+  background: linear-gradient(150deg, #194665, #071a32) !important;
+  border-color: #79c7e7 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 -3px 11px rgba(93,195,255,.48) !important;
+}
+
+/* Wolf cards and cave panels: fine engraved-style rims, soft glow. */
+#main .card,
+#sidebar .card,
+#main .panel,
+#main .table-responsive {
+  border: 1px solid #79c7e7 !important;
+  border-radius: 7px !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.045), 0 3px 12px rgba(0,0,0,.28) !important;
+  transition: border-color .18s ease, box-shadow .18s ease !important;
+}
+#main .card:hover,
+#sidebar .card:hover {
+  border-color: #daf7ff !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.09), 0 0 12px rgba(93,195,255,.48) !important;
+}
+#main .card-header,
+#sidebar .card-header,
+#main .panel-heading {
+  border-bottom: 1px solid #79c7e7 !important;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,.07);
+  letter-spacing: .015em;
+}
+/* Decorative edging for section header strips without modifying images. */
+#main .card-header::after,
+#sidebar .card-header::after {
+  content: "";
+  display: block;
+  width: 38px;
+  max-width: 40%;
+  height: 1px;
+  margin-top: 4px;
+  background: linear-gradient(90deg, #79c7e7, transparent);
+  pointer-events: none;
+}
+
+/* Smaller displays: keep action buttons tappable and reduce effects. */
+@media (max-width: 768px) {
+  #main .nav-tabs .nav-link { padding: .5rem .55rem !important; }
+  #main .card:hover, #sidebar .card:hover { box-shadow: 0 3px 8px rgba(0,0,0,.28) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, #main .nav-tabs .nav-link, #main .card, #sidebar .card { transition: none !important; }
+}
+
+/* ============================================================
+   MOONLIT BLUE — ULTRA CARDWORK (v3)
+   More ornate wolf cards and cave section styling.
+   ============================================================ */
+
+#main .card,
+#sidebar .card {
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid #8bd8f4 !important;
+  border-radius: 10px !important;
+  background: linear-gradient(180deg, rgba(6,20,39,.97), rgba(9,31,55,.94)) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(229,250,255,.16),
+    inset 0 0 22px rgba(85,149,204,.08),
+    0 4px 14px rgba(0,0,0,.34) !important;
+}
+
+#main .card::before,
+#sidebar .card::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(223,248,255,.16);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+#main .card::after,
+#sidebar .card::after {
+  content: "✦";
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 10px;
+  color: rgba(201,241,255,.82);
+  text-shadow: 0 0 8px rgba(124,212,255,.42);
+  pointer-events: none;
+}
+
+#main .card:hover,
+#sidebar .card:hover {
+  border-color: #dcf7ff !important;
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 0 0 1px rgba(234,251,255,.24),
+    inset 0 0 26px rgba(89,165,221,.10),
+    0 0 16px rgba(113,209,255,.34),
+    0 6px 16px rgba(0,0,0,.36) !important;
+}
+
+#main .card-header,
+#sidebar .card-header,
+#main .panel-heading {
+  position: relative !important;
+  background: linear-gradient(180deg, rgba(45,66,92,.98), rgba(25,40,62,.96)) !important;
+  color: #eefcff !important;
+  border-bottom: 1px solid #8bd8f4 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10), inset 0 -1px 0 rgba(0,0,0,.35) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.65);
+  letter-spacing: .02em;
+}
+
+#main .card-header::before,
+#sidebar .card-header::before {
+  content: "❉";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: rgba(220,247,255,.86);
+  pointer-events: none;
+}
+
+#main .card img,
+#sidebar .card img,
+#main .card-img-top,
+#sidebar .card-img-top {
+  border: 1px solid rgba(139,216,244,.70) !important;
+  box-shadow: 0 0 0 2px rgba(9,31,55,.92), 0 0 12px rgba(35,94,135,.22) !important;
+  border-radius: 4px !important;
+}
+
+#main .table-responsive,
+#main .panel,
+#main .boxcontainer {
+  border: 1px solid rgba(139,216,244,.80) !important;
+  border-radius: 10px !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.04),
+    0 4px 12px rgba(0,0,0,.26) !important;
+}
+
+#main select,
+#main .form-control {
+  border-radius: 8px !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04) !important;
+}
+
+@media (max-width: 768px) {
+  #main .card:hover,
+  #sidebar .card:hover {
+    transform: none !important;
+  }
+}
