@@ -1,0 +1,111 @@
+/* ============================================================
+   MOONHOWL SHADOW — THEME 2: MOONLIT BLUE
+   Alternative to moonhowl-shadow.css (Theme 1)
+   Keep only ONE theme URL active in Wolvden CSS Files.
+   Your existing Den HTML and wolf banner remain unchanged.
+   ============================================================ */
+:root {
+  --moon-deep: #061424;
+  --moon-panel: rgba(9, 27, 45, .93);
+  --moon-gold: #81b9c8;
+  --moon-lightgold: #d2f4ee;
+  --moon-ivory: #e5f3f6;
+  --moon-teal: #96e7e7;
+}
+
+/* Use the ORIGINAL moonlit forest image supplied for Theme 2. */
+body {
+  background: #071b33 url("https://88mimicri88.github.io/moonhowl-shadow/moonhowl-moonlit-bg.jpg") center center / cover fixed no-repeat !important;
+  color: var(--moon-ivory);
+}
+
+/* Content shell — cool midnight-blue glass panels. */
+#main, main, .container.main, .container-fluid.main, #sidebar {
+  background-color: rgba(5, 16, 31, .88) !important;
+}
+.card, .card-body, .card-header, .panel, .panel-body,
+.panel-heading, .table, .table-responsive, .alert, .well, .boxcontainer {
+  background-color: var(--moon-panel) !important;
+  color: var(--moon-ivory) !important;
+  border-color: rgba(111, 187, 206, .53) !important;
+}
+.card, .panel, .alert, .well {
+  border: 1px solid rgba(111, 187, 206, .53) !important;
+  box-shadow: 0 3px 15px rgba(0, 6, 19, .48);
+}
+.card-header, .panel-heading, thead th, .table thead th {
+  color: #c9eff1 !important;
+  background: rgba(5, 19, 35, .97) !important;
+  border-bottom: 1px solid rgba(112, 185, 206, .55) !important;
+}
+.table td, .table th,
+.table-striped tbody tr:nth-of-type(odd),
+.table-striped tbody tr:nth-of-type(even) {
+  color: var(--moon-ivory) !important;
+  background-color: rgba(12, 34, 55, .87) !important;
+  border-color: rgba(135, 201, 219, .28) !important;
+}
+h1, h2, h3, h4, h5, h6 { color: #d4f9f4 !important; }
+a { color: #96e7e7; }
+a:hover, a:focus { color: #ffffff; }
+
+/* Navigation and tabs. */
+.navbar, .navbar-main, .navbar-status, .nav-tabs {
+  background-color: rgba(5, 18, 34, .97) !important;
+  border-color: rgba(125, 194, 210, .52) !important;
+}
+.navbar a, .navbar .nav-link, .nav-tabs .nav-link { color: #e0f5f6 !important; }
+.nav-tabs .nav-link.active {
+  background: #133a52 !important;
+  border-color: #89d9df !important;
+  color: #e5ffff !important;
+}
+
+/* Inputs and select menus. */
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+  color: var(--moon-ivory) !important;
+  background-color: #10283e !important;
+  border-color: #6aa9bc !important;
+}
+input:focus, select:focus, textarea:focus {
+  outline-color: #9cebf0;
+  border-color: #9cebf0 !important;
+}
+
+/* Existing wolf banner: same image, new moonlight-themed surround. */
+.moonhowl-hero {
+  max-width: 100%;
+  margin: 10px auto 24px;
+  padding: 12px;
+  border: 2px solid #7bc1ce;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(5, 22, 41, .97), rgba(15, 48, 67, .94));
+  box-shadow: 0 7px 24px rgba(0, 5, 18, .65), inset 0 0 0 1px rgba(194, 249, 246, .30);
+  text-align: center;
+}
+.moonhowl-hero img {
+  width: 100%; max-width: 100%; height: auto;
+  display: block; border-radius: 5px;
+}
+.moonhowl-welcome {
+  padding: 16px 12px 6px;
+  color: var(--moon-ivory);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.moonhowl-welcome h2 {
+  margin: 0 0 6px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-variant: small-caps;
+  letter-spacing: .08em;
+  color: #d4f9f4 !important;
+  font-size: clamp(23px, 3vw, 34px);
+  border: 0 !important;
+}
+.moonhowl-welcome p { margin: 8px auto; max-width: 680px; }
+.moonhowl-flourish { color: #89dae0; letter-spacing: .4em; }
+@media (max-width: 768px) {
+  body { background-attachment: scroll !important; }
+  .moonhowl-hero { padding: 6px; }
+  .moonhowl-welcome { font-size: 14px; }
+}
