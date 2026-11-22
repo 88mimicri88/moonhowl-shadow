@@ -1,0 +1,134 @@
+/* ============================================================
+   MOONHOWL SHADOW — Wolvden Den theme, version 1
+   Forest background + emerald / antique gold interface
+   Hosted images: GitHub Pages / 88mimicri88
+   To undo: remove this stylesheet URL from Wolvden CSS Files.
+   ============================================================ */
+:root {
+  --moon-deep: #101d1a;
+  --moon-panel: rgba(16, 30, 27, .93);
+  --moon-gold: #aa8950;
+  --moon-lightgold: #e9c987;
+  --moon-ivory: #eee5d5;
+  --moon-teal: #a0ddd3;
+}
+
+/* Background art remains outside the main game content. */
+body {
+  background: #102723 url("https://88mimicri88.github.io/moonhowl-shadow/moonhowl-forest-bg.png.png") center center / cover fixed no-repeat !important;
+  color: var(--moon-ivory);
+}
+
+/* Wolvden's centered page content and sidebar. */
+#main,
+main,
+.container.main,
+.container-fluid.main,
+#sidebar {
+  background-color: rgba(15, 26, 24, .89) !important;
+}
+
+/* Regular content surfaces. Keep controls and wolf cards legible. */
+.card,
+.card-body,
+.card-header,
+.panel,
+.panel-body,
+.panel-heading,
+.table,
+.table-responsive,
+.alert,
+.well,
+.boxcontainer {
+  background-color: var(--moon-panel) !important;
+  color: var(--moon-ivory) !important;
+  border-color: rgba(170, 137, 80, .7) !important;
+}
+
+.card, .panel, .alert, .well {
+  border: 1px solid rgba(170, 137, 80, .65) !important;
+  box-shadow: 0 3px 12px rgba(0,0,0,.22);
+}
+
+.card-header, .panel-heading, thead th, .table thead th {
+  color: var(--moon-lightgold) !important;
+  background: rgba(9, 25, 21, .96) !important;
+  border-bottom: 1px solid rgba(170, 137, 80, .65) !important;
+}
+
+/* Zebra rows: keep text and stats clear. */
+.table td, .table th,
+.table-striped tbody tr:nth-of-type(odd),
+.table-striped tbody tr:nth-of-type(even) {
+  color: var(--moon-ivory) !important;
+  border-color: rgba(170, 137, 80, .28) !important;
+  background-color: rgba(21, 35, 31, .8) !important;
+}
+
+h1,h2,h3,h4,h5,h6 { color: var(--moon-lightgold) !important; }
+a { color: var(--moon-teal); }
+a:hover, a:focus { color: #ffe2a0; }
+
+/* Navigation and tabs. */
+.navbar, .navbar-main, .navbar-status, .nav-tabs {
+  background-color: rgba(12, 25, 22, .96) !important;
+  border-color: rgba(170, 137, 80, .6) !important;
+}
+.navbar a, .navbar .nav-link, .nav-tabs .nav-link { color: #efe4c8 !important; }
+.nav-tabs .nav-link.active {
+  background: #263b33 !important;
+  border-color: var(--moon-gold) !important;
+  color: var(--moon-lightgold) !important;
+}
+
+/* Form controls only; keep Wolvden action button colors mostly intact. */
+input:not([type="checkbox"]):not([type="radio"]), select, textarea {
+  color: var(--moon-ivory) !important;
+  background-color: #182a26 !important;
+  border-color: #806b46 !important;
+}
+input:focus, select:focus, textarea:focus {
+  outline-color: #82c8b8;
+  border-color: #82c8b8 !important;
+}
+
+/* Custom introduction is scoped to our own HTML, not Wolvden cards. */
+.moonhowl-hero {
+  max-width: 100%;
+  margin: 10px auto 24px;
+  padding: 12px;
+  border: 2px solid #b28c4c;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(8, 28, 25, .97), rgba(25, 40, 32, .93));
+  box-shadow: 0 7px 24px rgba(0,0,0,.5), inset 0 0 0 1px rgba(221,188,117,.35);
+  text-align: center;
+}
+.moonhowl-hero img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+.moonhowl-welcome {
+  padding: 16px 12px 6px;
+  color: var(--moon-ivory);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.moonhowl-welcome h2 {
+  margin: 0 0 6px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-variant: small-caps;
+  letter-spacing: .08em;
+  color: #eed19a !important;
+  font-size: clamp(23px, 3vw, 34px);
+  border: 0 !important;
+}
+.moonhowl-welcome p { margin: 8px auto; max-width: 680px; }
+.moonhowl-flourish { color: #72c3b1; letter-spacing: .4em; }
+@media(max-width: 768px) {
+  body { background-attachment: scroll !important; }
+  .moonhowl-hero { padding: 6px; }
+  .moonhowl-welcome { font-size: 14px; }
+}
